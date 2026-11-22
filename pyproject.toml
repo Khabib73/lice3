@@ -1,0 +1,157 @@
+[project]
+name = "lice3"
+version = "0.13.0"
+description = "Generate license files for your projects"
+authors = [
+  { name = "Nikita Sobolev", email = "mail@sobolevn.me" },
+  { name = "Khabib Shakhbanov", email = "kh73bb@yahoo.com" },
+]
+license = "BSD-3-Clause"
+readme = "README.md"
+requires-python = ">=3.10"
+
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Intended Audience :: Developers",
+  "License :: OSI Approved :: BSD License",
+  "Operating System :: OS Independent",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Programming Language :: Python :: 3.14",
+  "Programming Language :: Python :: 3.15",
+]
+dependencies = [
+  "pyperclip>=1.9.0",
+  "rich>=13.8.0",
+  "simple-toml-settings>=0.8.0",
+  "single-source>=0.4.0",
+  "typer>=0.12.5",
+]
+
+[project.urls]
+"repository" = ""
+"homepage" = ""
+"Pull Requests" = ""
+"Bug Tracker" = ""
+"Changelog" = ""
+
+[project.scripts]
+lice = "lice3.core:app"
+
+[dependency-groups]
+dev = [
+  "mypy >= 1.11.2",
+  "ruff >= 0.7.3",
+  "pyfakefs >= 5.6.0",
+  "pytest >= 8.3.2",
+  "pytest-clarity >= 1.0.1",
+  "pytest-cov >= 5.0.0",
+  "pytest-sugar >= 1.0.0",
+  "pytest-randomly >= 3.15.0",
+  "pytest-reverse >= 1.7.0",
+  "pytest-mock >= 3.14.0",
+  "mock >= 5.1.0",
+  "poethepoet >= 0.28.0",
+  "github-changelog-md >= 0.9.5",
+  "mkdocs >= 1.6.1",
+  "mkdocs-autorefs >= 1.2.0",
+  "mkdocs-material >= 9.5.34",
+  "mkdocs-minify-plugin >= 0.8.0",
+  "pymdown-extensions >= 10.9",
+  "pygments >= 2.18.0",
+  "prek>=0.3.3",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+
+[tool.poe.tasks]
+pre.cmd = "prek run --all-files"
+pre.help = "Run pre-commit checks with 'prek'"
+mypy.cmd = "mypy . --strict"
+mypy.help = "Run mypy checks"
+format.help = "Format code with Ruff"
+format.cmd = "ruff format ."
+ruff.help = "Run Ruff checks"
+ruff.cmd = "ruff check --output-format=concise ."
+
+changelog.cmd = "github-changelog-md"
+changelog.help = "Generate a changelog"
+
+"docs:publish".cmd = "mkdocs gh-deploy"
+"docs:publish".help = "Publish documentation to GitHub Pages"
+"docs:build".cmd = "mkdocs build"
+"docs:build".help = "Build documentation locally to './site' folder"
+"docs:serve".cmd = "mkdocs serve -w TODO.md -w CHANGELOG.md -w CONTRIBUTING.md"
+"docs:serve".help = "Serve documentation locally"
+"docs:serve:all".cmd = "mkdocs serve -w TODO.md -w CHANGELOG.md -w CONTRIBUTING.md -a 0.0.0.0:9000"
+"docs:serve:all".help = "Serve documentation locally on all interfaces"
+
+[tool.pytest.ini_options]
+addopts = ["--cov", "--cov-report", "term-missing", "--cov-report", "html"]
+filterwarnings = [
+  "ignore:pkg_resources is deprecated as an API:DeprecationWarning",
+]
+mock_use_standalone_module = true
+
+[tool.coverage.run]
+source = ["lice3"]
+omit = ["*/tests/*"]
+
+[tool.ruff]
+line-length = 80
+lint.select = ["ALL"] # we are being very strict!
+lint.ignore = [
+  "PGH003",
+  "FBT002",
+  "FBT003",
+  "B006",
+  "CPY001",  # no copyright headers in source files
+  "PLR0917", # typer commands may take many positional arguments
+] # These rules are too strict even for us 😝
+lint.extend-ignore = [
+  "COM812",
+  "ISC001",
+] # these are ignored for ruff formatting
+
+src = ["lice3"]
+target-version = "py310" # minimum python version supported
+
+[tool.ruff.format]
+indent-style = "space"
+quote-style = "double"
+
+[tool.ruff.lint.pep8-naming]
+classmethod-decorators = ["pydantic.validator", "pydantic.root_validator"]
+
+[tool.ruff.lint.pydocstyle]
+convention = "google"
+
+[tool.ruff.lint.extend-per-file-ignores]
+"lice3/tests/**/*.py" = [
+  "S101",   # we can (and MUST!) use 'assert' in test files.
+  "ANN001", # annotations for fixtures are sometimes a pain for test files
+  "ARG00",  # test fixtures often are not directly used
+]
+
+[tool.ruff.lint.isort]
+known-first-party = ["lice3"]
+
+[tool.ruff.lint.pyupgrade]
+keep-runtime-typing = true
+
+[tool.mypy]
+python_version = "3.12"
+
+[[tool.mypy.overrides]]
+module = "pyperclip"
+ignore_missing_imports = true
+
+[[tool.mypy.overrides]]
+disable_error_code = ["method-assign", "no-untyped-def", "attr-defined"]
+module = "tests.*"
