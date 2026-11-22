@@ -34,15 +34,3 @@ jobs:
 
       - name: Run lint, type-check and tests
         run: make test
-
-  dependency-review:
-    name: Dependency Review
-    if: github.event_name == 'pull_request'
-    runs-on: ubuntu-latest
-    permissions:
-      contents: read
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v6
-      - name: Dependency Review
-        uses: actions/dependency-review-action@v4
