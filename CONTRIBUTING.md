@@ -5,7 +5,7 @@ Thank you for your interest in contributing to Lice3! We welcome
 all contributions, big or small.
 
 If you are not sure where to start, please take a look at the [open
-issues](https://github.com/seapagan/lice2/issues). If you have an
+issues](https://github.com/Khabib73/lice3/issues). If you have an
 idea for a new feature or would like to report a bug, please open a new issue.
 
 We also welcome contributions to the documentation. If you find any errors or
@@ -48,8 +48,8 @@ If you already have a Python version installed, uv will use this.
 
 Before you start contributing, please make sure you have read and understood our
 [Code of
-Conduct](https://github.com/seapagan/lice2/blob/main/CODE_OF_CONDUCT.md) and
-[License](https://github.com/seapagan/lice2/blob/main/LICENSE).
+Conduct](https://github.com/Khabib73/lice3/blob/main/CODE_OF_CONDUCT.md) and
+[License](https://github.com/Khabib73/lice3/blob/main/LICENSE).
 
 To get started, follow these steps:
 
@@ -201,14 +201,14 @@ Here are some guidelines to follow when contributing to Lice3:
 - Make sure your code passes all tests before submitting a pull request.
 - Document your code using
   [docstrings](https://www.python.org/dev/peps/pep-0257/).
-- Use [GitHub issues](https://github.com/seapagan/lice2/issues)
+- Use [GitHub issues](https://github.com/Khabib73/lice3/issues)
   to report bugs or suggest new features.
 
 ## Contact
 
 If you have any questions or need help with contributing, please contact me
-**@seapagan** on GitHub. You can also use the [GitHub
-Discussions](https://github.com/seapagan/lice2/discussions)
+**@Khabib73** on GitHub. You can also use the [GitHub
+Discussions](https://github.com/Khabib73/lice3/discussions)
 feature.
 
 Happy contributing!

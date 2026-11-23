@@ -8,6 +8,20 @@ For the original changelog, please refer to the "OLD_CHANGELOG.md" file in the r
 This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 
+## [0.14.0](https://github.com/Khabib73/lice3/releases/tag/v0.14.0) (November 23, 2026)
+
+**Dependency Updates**
+
+- Update all runtime dependencies to their latest releases: `rich` 15.0.0,
+  `typer` 0.29.x, `pyperclip` 1.11.0, `simple-toml-settings` 0.13.1 and
+  `single-source` 0.4.0.
+- Update all development dependencies to their latest releases, including
+  `pytest` 9.2.0, `pytest-cov` 7.1.0, `coverage` 7.17.x, `ruff` 0.17.6,
+  `mypy` 2.4.1, `mkdocs-material` 9.8.x, `mkdocs` 1.6.1, `poethepoet` 0.49.0,
+  `prek` 0.5.11 and `github-changelog-md` 0.10.0.
+- Support the current Python releases, from 3.10 up to 3.15, in both the
+  package classifiers and the CI test matrix.
+
 ## [0.13.0](https://github.com/seapagan/lice2/releases/tag/0.13.0) (November 13, 2024)
 
 **New Features**
@@ -82,7 +96,8 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 ## [0.10.1](https://github.com/seapagan/lice2/releases/tag/0.10.1) (August 26, 2024)
 
 Purely a documentation fix so that the updated README gets to PyPI
-[`Full Changelog`](https://github.com/seapagan/lice2/compare/0.10.0...0.10.1) | [`Diff`](https://github.com/seapagan/lice2/compare/0.10.0...0.10.1.diff) | [`Patch`](https://github.com/seapagan/lice2/compare/0.10.0...0.10.1.patch)
+
+[`Full Changelog`](https://github.com/seapagan/lice2/compare/0.10.0...0.10.1) | [`Diff`](https://github.com/seapagan/lice2/compare/0.10.0...0.10.1.diff) | [`Patch`](https://github.com/seapagan/lice2/compare/0.10.0...0.10.1.patch)
 
 ## [0.10.0](https://github.com/seapagan/lice2/releases/tag/0.10.0) (August 26, 2024)
 
@@ -134,5 +149,6 @@ Purely a documentation fix so that the updated README gets to PyPI
 ## [0.7.0](https://github.com/seapagan/lice2/releases/tag/0.7.0) (August 18, 2024)
 
 This is the first release of this new fork. Main thing was getting the Python 3.12 compatibility fixed.
----
+
+---
 *This changelog was generated using [github-changelog-md](http://changelog.seapagan.net/) by [Seapagan](https://github.com/seapagan)*

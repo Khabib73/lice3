@@ -67,7 +67,7 @@ def get_lang(args: SimpleNamespace) -> str:
             "I do not know about a language ending with "
             f"extension '{lang}'.\n"
             "Please send a pull request adding this language to\n"
-            "https://github.com/seapagan/lice2. Thanks!\n"
+            "https://github.com/Khabib73/lice3. Thanks!\n"
         )
         raise typer.Exit(1)
     return lang

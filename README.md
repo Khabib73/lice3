@@ -78,13 +78,13 @@ If you want to install the development version to try out new features before
 they are release, you can do so with the following command:
 
 ```console
-pipx install git+https://github.com/seapagan/lice2.git
+pipx install git+https://github.com/Khabib73/lice3.git
 ```
 
 or
 
 ```console
-pip install git+https://github.com/seapagan/lice2.git
+pip install git+https://github.com/Khabib73/lice3.git
 ```
 
 ### Autocompletion
@@ -99,7 +99,7 @@ lice --install-completion
 ## Overview
 
 Full usage information is available on the documentation site at
-<https://seapagan.github.io/lice2>
+<https://khabib73.github.io/lice3>
 
 Generate a BSD-3 license, the default:
 
@@ -303,7 +303,7 @@ uv sync
 
 We use [uv](https://docs.astral.sh/uv/) to manage the virtual environment and
 dependencies. See [Contributing](CONTRIBUTING.md) and the relevant section on
-the [website](https://seapagan.github.io/lice2/) for details
+the [website](https://khabib73.github.io/lice3/) for details
 
 All contributions are welcome, and I will try to respond to issues and PR's as
 soon as possible.
