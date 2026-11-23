@@ -19,13 +19,13 @@ If you want to install the development version to try out new features before
 they are release, you can do so with the following command:
 
 ```console
-pipx install git+https://github.com/seapagan/lice2.git
+pipx install git+https://github.com/Khabib73/lice3.git
 ```
 
 or
 
 ```console
-pip install git+https://github.com/seapagan/lice2.git
+pip install git+https://github.com/Khabib73/lice3.git
 ```
 
 ## Autocompletion

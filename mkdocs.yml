@@ -13,14 +13,12 @@ theme:
 extra:
   social:
     - icon: fontawesome/brands/github
-      link: https://github.com/seapagan/lice2
-    - icon: fontawesome/brands/twitter
-      link: https://twitter.com/gnramsay_dev
+      link: https://github.com/Khabib73/lice3
 
-copyright: © 2024 Grant Ramsay (Seapagan)
+copyright: © 2026 Khabib Shakhbanov
 
 repo_name: lice3
-repo_url: https://github.com/seapagan/lice2
+repo_url: https://github.com/Khabib73/lice3
 
 # default plugins here are to minify the html, css and js plus enable the search
 # plugin. Adjust to your liking.
