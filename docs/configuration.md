@@ -2,12 +2,14 @@
 
 There is an optional configuration file that can be used to customize some of
 the application defaults. This is a TOML file that should be named `config.toml`
-and placed in the `lice` subdirectory of the appliciable configuration directory
-for your operating system. Generally this is `$HOME/.config/` on all operating
+and placed in the `lice` subdirectory of the applicable configuration directory
+for your operating system. The `$XDG_CONFIG_HOME` environment variable is
+honoured when it is set, otherwise `$HOME/.config/` is used on all operating
 systems.
 
 So for example, on a Linux or Mac system, the configuration file would be
-located at `$HOME/.config/lice/config.toml`.
+located at `$HOME/.config/lice/config.toml`, or at
+`$XDG_CONFIG_HOME/lice/config.toml` when `$XDG_CONFIG_HOME` is set.
 
 The TOML file should look like this:
 
@@ -35,3 +37,9 @@ Currently there are four options that can be set:
   generation to the old style with extra spaces and newlines. If this option is
   not set, it will default to `false`. See the [--legacy
   option](usage.md#-legacy-option) for more information.
+
+The file is parsed with the Python standard library (`tomllib` on Python 3.11+,
+`tomli` on Python 3.10), so no extra runtime dependency is required. Values of
+an unexpected type are ignored and fall back to their defaults. If the file
+cannot be parsed at all, a warning is printed and the built-in defaults are
+used, so the application keeps working.

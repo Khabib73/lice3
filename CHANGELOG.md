@@ -8,6 +8,28 @@ For the original changelog, please refer to the "OLD_CHANGELOG.md" file in the r
 This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 
+## [0.14.1](https://github.com/Khabib73/lice3/releases/tag/v0.14.1) (November 23, 2026)
+
+**Changes**
+
+- Replace the third-party `simple-toml-settings` package with the Python
+  standard library: `tomllib` on Python 3.11+ and `tomli` on Python 3.10 only.
+  The configuration file format, the `[lice]` section and the
+  `$HOME/.config/lice/config.toml` location are unchanged, so existing
+  configuration files keep working as-is.
+- Honour the `$XDG_CONFIG_HOME` environment variable when locating the
+  configuration file, falling back to `$HOME/.config/lice/config.toml` when it
+  is not set.
+- Make configuration parsing tolerant: values with an unexpected type are now
+  ignored and fall back to their defaults, and an unparsable `config.toml`
+  prints a warning instead of raising during application startup.
+- Remove the `simple-toml-settings` runtime dependency together with its
+  compiled `rtoml` transitive dependency.
+
+**Dependency Updates**
+
+- Add `tomli` as a runtime dependency, required only on Python 3.10.
+
 ## [0.14.0](https://github.com/Khabib73/lice3/releases/tag/v0.14.0) (November 23, 2026)
 
 **Dependency Updates**
