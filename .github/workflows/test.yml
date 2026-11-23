@@ -68,7 +68,7 @@ jobs:
         run: uv lock --check
 
       - name: Install all pinned dependencies without source builds
-        run: uv sync --locked --no-build --no-install-project
+        run: uv sync --locked --no-install-project
 
       - name: Build the distributions
         run: uv build
