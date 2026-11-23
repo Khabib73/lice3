@@ -24,13 +24,11 @@ rich==15.0.0
     # via
     #   lice3
     #   typer
-rtoml==0.14.0
-    # via simple-toml-settings
 shellingham==1.5.4
     # via typer
-simple-toml-settings==0.13.1
-    # via lice3
 single-source==0.4.0
+    # via lice3
+tomli==2.5.0 ; python_full_version < '3.11'
     # via lice3
 typer==0.29.1 ; python_full_version < '3.11'
     # via lice3

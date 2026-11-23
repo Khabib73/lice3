@@ -196,9 +196,7 @@ ruff==0.17.6
 shellingham==1.5.4
     # via typer
 simple-toml-settings==0.13.1
-    # via
-    #   github-changelog-md
-    #   lice3
+    # via github-changelog-md
 single-source==0.4.0
     # via lice3
 six==1.17.0 ; python_full_version < '3.11'
@@ -208,6 +206,7 @@ termcolor==3.3.0
 tomli==2.5.0 ; python_full_version < '3.11'
     # via
     #   coverage
+    #   lice3
     #   mypy
     #   poethepoet
     #   pytest
