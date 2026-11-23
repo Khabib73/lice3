@@ -307,8 +307,3 @@ the [website](https://khabib73.github.io/lice3/) for details
 
 All contributions are welcome, and I will try to respond to issues and PR's as
 soon as possible.
-
-## Changelog
-
-See the [CHANGELOG.md](CHANGELOG.md) file for details for this fork, and the
-[OLD_CHANGELOG.md](OLD_CHANGELOG.md) file for the original project.
