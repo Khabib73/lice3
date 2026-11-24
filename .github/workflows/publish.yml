@@ -80,8 +80,3 @@ jobs:
 
       - name: Publish to PyPI
         uses: pypa/gh-action-pypi-publish@release/v1
-        # If you prefer an API token over Trusted Publishing, uncomment the
-        # two lines below and add the token as a repository/environment secret
-        # named PYPI_API_TOKEN (username is always `__token__`).
-        # with:
-        #   password: ${{ secrets.PYPI_API_TOKEN }}

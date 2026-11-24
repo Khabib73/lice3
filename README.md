@@ -15,48 +15,6 @@ Lice generates license files. No more hunting down licenses from other projects.
 - [Contribute to the Development](#contribute-to-the-development)
 - [Changelog](#changelog)
 
-## Changes from the original 'Lice' project
-
-> [!NOTE]
-> This project is forked from the original
-> [lice](https://github.com/licenses/lice) project which seems to have been
-> abandoned and is not compatible with Python 3.12.
->
-> I have created a new project rather than issue a PR because the changes are
-> quite large, and no-one is merging PR's on the original project. Otherwise,
-> the Git history is identical to the original.
-
-This version fixes the compatibility issue with Python 3.12, and adds some new
-features:
-
-- It has an API that can be imported into your Python projects to allow you to
-  generate licenses directly from within your own project.
-- Can read from a config file for default values.
-- Can optionally copy the license to the clipboard automatically.
-- Converted from 'argparse' to 'Typer' for CLI handling.
-- It now uses [uv](https://docs.astral.sh/uv/) for dependency management.
-- Fixes the issue where extra spaces and newlines were added to the generated
-  license text. This was considered a bug by at least several users, so it was
-  fixed in version `0.10.0`. However, if you want to generate a license with the
-  old style, you can use the `--legacy` option or set the `legacy` key in the
-  configuration file to `true`.
-- The code has been modernized and cleaned up, all type-hinting has been
-  added.
-- It passes strict linting with the latest 'Ruff' and 'mypy'.
-- GitHub actions set up for linting, `Renovate` and `Dependency Review`.
-- Can output a list of licenses and languages in JSON format for integration
-  with other tools.
-
-In addition, future plans can be seen in the [TODO.md](TODO.md) file.
-
-> [!IMPORTANT]
-> This appllication is now only compatible with Python 3.9 and above. If you
-> wish to use an older version, use the original 'lice' package.
->
-> However, I'ts the **development** dependencies that are causing the
-> incompatibility, so I'll look at reducing the **Production** version in future
-> releases while still requiring Python 3.9 or above for development.
-
 ## Installation
 
 Installation is standard. If you are using [pipx](https://pipx.pypa.io/)
@@ -308,7 +266,30 @@ the [website](https://khabib73.github.io/lice3/) for details
 All contributions are welcome, and I will try to respond to issues and PR's as
 soon as possible.
 
-## Changelog
+## Changes from the original 'Lice' project
 
-See the [CHANGELOG.md](CHANGELOG.md) file for details for this fork, and the
-[OLD_CHANGELOG.md](OLD_CHANGELOG.md) file for the original project.
+> [!NOTE]
+> This project is forked from the original
+> [lice](https://github.com/licenses/lice) project which seems to have been
+> abandoned and is not compatible with Python 3.12.
+
+[lice2](https://github.com/seapagan/lice2) fixes the compatibility issue with Python 3.12, and adds some new
+features:
+
+- It has an API that can be imported into your Python projects to allow you to
+  generate licenses directly from within your own project.
+- Can read from a config file for default values.
+- Can optionally copy the license to the clipboard automatically.
+- Converted from 'argparse' to 'Typer' for CLI handling.
+- It now uses [uv](https://docs.astral.sh/uv/) for dependency management.
+- Fixes the issue where extra spaces and newlines were added to the generated
+  license text. This was considered a bug by at least several users, so it was
+  fixed in version `0.10.0`. However, if you want to generate a license with the
+  old style, you can use the `--legacy` option or set the `legacy` key in the
+  configuration file to `true`.
+- The code has been modernized and cleaned up, all type-hinting has been
+  added.
+- It passes strict linting with the latest 'Ruff' and 'mypy'.
+- GitHub actions set up for linting, `Renovate` and `Dependency Review`.
+- Can output a list of licenses and languages in JSON format for integration
+  with other tools.
